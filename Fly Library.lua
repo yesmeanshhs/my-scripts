@@ -205,21 +205,21 @@ Connections["MobileBegin"] = RS.RenderStepped:Connect(function()
 if Flying then
 if LP and LP.Character then
 if LP.Character:FindFirstChild(GName,true) then
-Lp.Character:FindFirstChild(GName,true).CFrame = C.CoordinateFrame
+LP.Character:FindFirstChild(GName,true).CFrame = C.CoordinateFrame
 end
 local Dir = CM:GetMoveVector()
 if LP.Character:FindFirstChild(VName,true) then
 LP.Character:FindFirstChild(VName,true).Velocity = Vector3.new()
-if direction.X > 0 then
+if Dir.X > 0 then
 LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(direction.X*Speed)
 end
-if direction.X < 0 then
+if Dir.X < 0 then
 LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(direction.X*Speed)
 end
-if direction.Z > 0 then
+if Dir.Z > 0 then
 LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(direction.Z*Speed)
 end
-if direction.Z < 0 then
+if Dir.Z < 0 then
 LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(direction.Z*Speed)
 end
 end

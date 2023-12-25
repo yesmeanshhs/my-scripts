@@ -211,16 +211,16 @@ local Dir = CM:GetMoveVector()
 if LP.Character:FindFirstChild(VName,true) then
 LP.Character:FindFirstChild(VName,true).Velocity = Vector3.new()
 if Dir.X > 0 then
-LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(direction.X*Speed)
+LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(Dir.X*Speed)
 end
 if Dir.X < 0 then
-LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(direction.X*Speed)
+LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity + C.CFrame.RightVector*(Dir.X*Speed)
 end
 if Dir.Z > 0 then
-LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(direction.Z*Speed)
+LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(Dir.Z*Speed)
 end
 if Dir.Z < 0 then
-LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(direction.Z*Speed)
+LP.Character:FindFirstChild(VName,true).Velocity = LP.Character:FindFirstChild(VName,true).Velocity - C.CFrame.LookVector*(Dir.Z*Speed)
 end
 end
 end

@@ -241,7 +241,7 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
 
     ImageFrame.Parent = Main
     ImageFrame.Image = "rbxassetid://"..ImageFrameId
-    ImageFrame.Position = Main.Position
+    ImageFrame.Position = UDim2.new(0,0,0,0)
     ImageFrame.Size = Main.Size
     ImageFrame.Active = false
 

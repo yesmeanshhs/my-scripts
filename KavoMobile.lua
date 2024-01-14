@@ -403,6 +403,7 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
         page.Position = UDim2.new(0, 0, -0.00371747208, 0)
         page.Size = UDim2.new(1, 0, 1, 0)
         page.ScrollBarThickness = 5
+	page.Transparency = 1
         page.Visible = false
         page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
 

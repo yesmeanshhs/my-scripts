@@ -149,7 +149,7 @@ function Kavo:ToggleUI()
     end
 end
 
-function Kavo.CreateLib(kavName, themeList)
+function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     if not themeList then
         themeList = themes
     end
@@ -196,6 +196,7 @@ function Kavo.CreateLib(kavName, themeList)
     end
     local ScreenGui = Instance.new("ScreenGui")
     local Main = Instance.new("Frame")
+    local ImageFrame = Instance.new("ImageLabel")
     local MainCorner = Instance.new("UICorner")
     local MainHeader = Instance.new("Frame")
     local headerCover = Instance.new("UICorner")
@@ -236,6 +237,12 @@ function Kavo.CreateLib(kavName, themeList)
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
     Main.Size = UDim2.new(0, 525, 0, 318)
+
+    ImageFrame.Parent = Main
+    ImageFrame.Image = "rbxassetid://"..ImageFrameId
+    ImageFrame.Position = Main.Position
+    ImageFrame.Size = Main.Size
+    ImageFrame.Active = false
 
     MainCorner.CornerRadius = UDim.new(0, 4)
     MainCorner.Name = "MainCorner"

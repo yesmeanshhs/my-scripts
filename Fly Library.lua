@@ -87,7 +87,7 @@ end
 end
 if Flying == true then
 if LP and LP.Character and LP.Character:FindFirstChildOfClass"Humanoid" then
-LP.Character:FindFirstChildOfClass"Humanoid".PlatformStand = true
+LP.Character:FindFirstChildOfClass"Humanoid".PlatformStand = false
 end
 if LP and LP.Character and LP.Character:FindFirstChild(VName,true) then
 LP.Character:FindFirstChild(VName,true).MaxForce = VectorHuge

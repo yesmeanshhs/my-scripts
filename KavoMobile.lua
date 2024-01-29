@@ -305,12 +305,12 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     hide.Name = "hide"
     hide.Parent = MainHeader
     hide.BackgroundTransparency = 1.000
-    hide.Position = UDim2.new(1.111999988, 0, 0.137999997, 0)
+    hide.Position = UDim2.new(0.819999988, 0, 0.137999997, 0)
     hide.Size = UDim2.new(0, 21, 0, 21)
     hide.ZIndex = 2
     hide.Image = "rbxassetid://3926305904"
-    hide.ImageRectOffset = Vector2.new(284, 4)
-    hide.ImageRectSize = Vector2.new(24, 24)
+    hide.ImageRectOffset = Vector2.new(727, 208)
+    hide.ImageRectSize = Vector2.new(30, 30)
     hide.MouseButton1Click:Connect(function()
     ScreenGui.Enabled = false
     HideButton.Enabled = true

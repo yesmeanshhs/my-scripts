@@ -203,6 +203,7 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     local coverup = Instance.new("Frame")
     local title = Instance.new("TextLabel")
     local close = Instance.new("ImageButton")
+    local hide = Instance.new("ImageButton")
     local MainSide = Instance.new("Frame")
     local sideCorner = Instance.new("UICorner")
     local coverup_2 = Instance.new("Frame")
@@ -279,6 +280,19 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     title.TextColor3 = Color3.fromRGB(245, 245, 245)
     title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
+
+    hide.Name = "close"
+    hide.Parent = MainHeader
+    hide.BackgroundTransparency = 1.000
+    hide.Position = UDim2.new(1.111999988, 0, 0.137999997, 0)
+    hide.Size = UDim2.new(0, 21, 0, 21)
+    hide.ZIndex = 2
+    hide.Image = "rbxassetid://3926305904"
+    hide.ImageRectOffset = Vector2.new(284, 4)
+    hide.ImageRectSize = Vector2.new(24, 24)
+    hide.MouseButton1Click:Connect(function()
+    ScreenGui.Enabled = false
+    end)
 
     close.Name = "close"
     close.Parent = MainHeader

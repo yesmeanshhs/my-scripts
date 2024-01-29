@@ -281,7 +281,28 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
 
-    hide.Name = "close"
+   local HideGui = Instance.new("ScreenGui")
+	HideGui.Enabled = false
+	HideGui.Parent = game:GetService"CoreGui"
+   local HideButton = Instance.new("ImageButton")
+	local UICorner = Instance.new("UICorner")
+	HideButton.Name = "GritsoHide"
+	HideButton.Parent = HideGui
+	HideButton.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+	HideButton.BackgroundTransparency = 0.14
+	HideButton.Position = UDim2.new(0.489, 0, 0, 0)
+	HideButton.Size = UDim2.new(0, 32, 0, 33)
+	HideButton.Font = Enum.Font.SourceSansBold
+	HideButton.Image
+	HideButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	HideButton.TextSize = 20.000
+	HideButton.TextWrapped = true
+	HideButton.Draggable = true
+	UICorner.Name = "GritsoHideCorner"
+	UICorner.CornerRadius = UDim.new(0.5, 0)
+	UICorner.Parent = HideButton
+
+    hide.Name = "hide"
     hide.Parent = MainHeader
     hide.BackgroundTransparency = 1.000
     hide.Position = UDim2.new(1.111999988, 0, 0.137999997, 0)
@@ -292,6 +313,7 @@ function Kavo.CreateLib(kavName, themeList, ImageFrameId)
     hide.ImageRectSize = Vector2.new(24, 24)
     hide.MouseButton1Click:Connect(function()
     ScreenGui.Enabled = false
+    HideButton.Enabled = true
     end)
 
     close.Name = "close"

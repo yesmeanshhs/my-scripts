@@ -17,4 +17,9 @@ function Stack:size()
 	return #self
 end
 
+function Stack:iterator()
+  return function()
+    return self:pop()
+end
+
 return Stack

@@ -3,13 +3,15 @@
 -- With this, you can load this github and start making it act like a module script
 
 local Stacks = {}
-Stacks.__index = Table
+Stacks.__index = Stacks
 Stacks.ConvertToString = function(self)
+if self.StackData then
 local Strings = {}
 for _, v in ipairs(self.StackData) do
 table.insert(Strings,tostring(v))
 end
 return "{"..table.concat(Strings,", ").."}"
+end
 end
 
 function Stacks.New()

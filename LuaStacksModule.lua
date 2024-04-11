@@ -78,9 +78,10 @@ return function() end
 end
 return function()
 if Index < self.StackAmount then
-local IndexValue = self.StackData[Index]
+local LastIndex = Index
+local IndexValue = self.StackData[LastIndex]
 Index += 1
-return IndexValue
+return LastIndex, IndexValue
 end
 end
 end
@@ -92,9 +93,10 @@ return function() end
 end
 return function()
 if Index > 0 then
-local IndexValue = self.StackData[Index]
+local LastIndex = Index
+local IndexValue = self.StackData[LastIndex]
 Index -= 1
-return IndexValue
+return LastIndex, IndexValue
 end
 end
 end

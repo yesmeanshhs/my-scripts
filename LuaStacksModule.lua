@@ -69,7 +69,7 @@ end
 -- This will be providing a way of creating TAS in roblox
 
 function Stacks:Iterator()
-local Index = 0
+local Index = 1
 if self.StackAmount == 0 then
 return function() end
 end
